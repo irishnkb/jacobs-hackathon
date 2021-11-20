@@ -5,5 +5,5 @@ class Item(models.Model):
     availability = models.BooleanField()
 
 
-record = Item(name="jimmy")
-record.save()
+#record = Item(name="jimmy")
+#record.save()
