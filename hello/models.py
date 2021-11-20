@@ -6,5 +6,4 @@ class Item(models.Model):
 
 
 record = Item(name="jimmy")
-record = Item(availability=0)
 record.save()
