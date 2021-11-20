@@ -19,4 +19,4 @@ def db(request):
 
     greetings = Item.objects.all()
 
-    return render(request, "db.html", {"items": items})
+    return render(request, "db.html", {"items": greetings})
