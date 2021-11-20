@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "hello",
+    "jacobs_hackaton",
+    "jacobs_hackaton.jacobs_hackaton",
+    "jacobs_hackaton.auth0login"
 ]
 
 MIDDLEWARE = [
