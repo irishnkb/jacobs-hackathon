@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-from .models import Greeting
+from .models import Item
 
 # Create your views here.
 def index(request):
@@ -14,9 +14,9 @@ def hello_world(request):
 
 def db(request):
 
-    greeting = Greeting()
+    greeting = Item()
     greeting.save()
 
-    greetings = Greeting.objects.all()
+    greetings = Item.objects.all()
 
-    return render(request, "db.html", {"greetings": greetings})
+    return render(request, "db.html", {"items": items})
