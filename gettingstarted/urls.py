@@ -19,4 +19,5 @@ urlpatterns = [
     path("my_team_is_cool", hello.views.hello_world),
     path("admin/", admin.site.urls),
     path("sports", hello.views.sport),
+    path("update_db/", hello.views.update_db)
 ]

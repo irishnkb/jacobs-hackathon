@@ -22,3 +22,14 @@ def db(request):
     items = Item.objects.all()
 
     return render(request, "db.html", {"items": items})
+
+def update_db(request):
+    print(request.GET)
+    id = request.GET['id']
+    print(id)
+    item = Item.objects.get(pk=id)
+    item.availability = not item.availability
+    item.save()
+    return render(request, "assistant.html")
+    
+
