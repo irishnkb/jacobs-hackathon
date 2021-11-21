@@ -3,7 +3,7 @@ from django.contrib import admin
 
 admin.autodiscover()
 
-import static.hello.views
+import gettingstarted.static.hello.views
 
 # To add a new path, first import the app:
 # import blog
@@ -14,11 +14,11 @@ import static.hello.views
 # Learn more here: https://docs.djangoproject.com/en/2.1/topics/http/urls/
 
 urlpatterns = [
-    path("", static.hello.views.index, name="index"),
-    path("items", static.hello.views.items, name="items"),
-    path("db/", static.hello.views.db, name="db"),
-    path("my_team_is_cool", static.hello.views.hello_world),
+    path("", gettingstarted.static.hello.views.index, name="index"),
+    path("items", gettingstarted.static.hello.views.items, name="items"),
+    path("db/", gettingstarted.static.hello.views.db, name="db"),
+    path("my_team_is_cool", gettingstarted.static.hello.views.hello_world),
     path("admin/", admin.site.urls),
-    path("sports", static.hello.views.sport),
-    path("update_db/", static.hello.views.update_db)
+    path("sports", gettingstarted.static.hello.views.sport),
+    path("update_db/", gettingstarted.static.hello.views.update_db)
 ]
