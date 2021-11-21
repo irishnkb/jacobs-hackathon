@@ -23,6 +23,9 @@
       <li>obj 2 </li>
       <li>obj 2 </li>
   </ul>
+  {% for item in items %}
+	<li>{{ item.name }}    {{ item.availability }}</li>
+  {% endfor %}
 
  
   
