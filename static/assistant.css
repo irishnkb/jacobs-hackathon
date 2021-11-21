@@ -52,7 +52,7 @@ ul.nav a:hover{
     cursor: pointer;
     transition: 0.3s;
 }
-
+/*
 @media (max-width: 450px) {
     .tab {
         padding: 20px;
@@ -67,7 +67,6 @@ ul.nav a:hover{
     .tabcontent{
         font-size: 1em;
     }
-}
 
   h1{
     font-family: 'Quicksand', sans-serif;
