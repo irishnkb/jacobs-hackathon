@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-from models import Item,Timing
+from hello.models import Item,Timing
 
 # Create your views here.
 def index(request):
