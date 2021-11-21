@@ -27,7 +27,7 @@ def sport(request):
     items = []
     for item in Item.objects.all():
         if item.category == "Sports Equipment":
-            items.push(item)
+            items.append(item)
 
 
     return render(request, "sport.html",{"items": items})
@@ -39,7 +39,7 @@ def board(request):
     items = []
     for item in Item.objects.all():
         if item.category == "Board Games":
-            items.push(item)
+            items.append(item)
     # return HttpResponse('Hello from Python!')
     return render(request, "board.html",{"items": items})
 
@@ -49,7 +49,7 @@ def everyday(request):
 
     for item in Item.objects.all():
         if item.category == "Everyday Items":
-            items.push(item)
+            items.append(item)
     # return HttpResponse('Hello from Python!')
     return render(request, "everyday.html",{"items": items})
 
