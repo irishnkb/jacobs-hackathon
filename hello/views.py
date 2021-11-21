@@ -19,6 +19,9 @@ def hello_world(request):
 def sport(request):
     # return HttpResponse('Hello from Python!')
     return render(request, "sport.html",{"items": Item.objects.all()})
+def search(request):
+    # return HttpResponse('Hello from Python!')
+    return render(request, "search.html")
 
 def db(request):
     item = Item()
