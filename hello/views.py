@@ -6,7 +6,7 @@ from .models import Item
 # Create your views here.
 def index(request):
     # return HttpResponse('Hello from Python!')
-    return render(request, "index.html")
+    return render(request, "assistant.html")
 
 def hello_world(request):
     return render(request, "hello_world.html")
