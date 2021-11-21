@@ -17,27 +17,6 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=1000)),
-                ('availability', models.BooleanField()),
-            ],
-        ),
-    ]
-
-class Migration2(migrations.Migration):
-
-    initial = True
-
-    dependencies = [
-        ('hello', '0001_initial'),
-    ]
-
-    operations = [
-        migrations.CreateModel(
-            name='Time',
-            fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('day', models.CharField(max_length=1000)),
-                ('date', models.DateField()),
-                ('time', models.TimeField()),
             ],
         ),
     ]
