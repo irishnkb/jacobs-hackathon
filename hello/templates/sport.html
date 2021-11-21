@@ -22,7 +22,7 @@
   <ul>
     {% for item in items 
       continue if item.category == 'sports_equipment'%}
-    <li>{{ item.name }}  {{item.availability ? "available" : "not available"}} </li>
+    <li><span>{{ item.name }}</span> <span class="info"> {{"available" if item.availability else "not available"}}</span> </li>
     {% endfor %}
   </ul>
 
