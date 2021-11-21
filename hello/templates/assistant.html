@@ -22,12 +22,14 @@
   <h1>Welcome to College Office!</h1>
   <br>
   <div class="hours">
-    <h2 class="inbox">Opening Hours for {{t.day}}, {{t.date}}</h2>
-    <br>
-    <p class="inbox">Afternoon:</p>
-    <h2 class="time">{{t.opening_time}}</h2>
-    <p class="inbox">Evening:</p>
-    <h2 class="time">{{t.closing_time}}</h2>
+    {% for t in timings %}
+      <h2 class="inbox">Opening Hours for {{t[current_time].day}}, {{t[current_time].date}}</h2>
+      <br>
+      <p class="inbox">Afternoon:</p>
+      <h2 class="time">{{t[current_time].opening_time}}</h2>
+      <p class="inbox">Evening:</p>
+      <h2 class="time">{{t[current_time].closing_time}}</h2>
+    {% endfor %}
   </div>
   
 </body>
