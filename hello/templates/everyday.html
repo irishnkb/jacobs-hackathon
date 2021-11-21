@@ -21,7 +21,7 @@
   <ul>
     <ul>
       {% for item in items 
-        continue if item.cateogry == 'everyday_items'%}
+        continue if item.category == 'everyday_items'%}
       <li>{{ item.name }}  {{item.availability ? "available" : "not available"}} </li>
       {% endfor %}
     </ul>
