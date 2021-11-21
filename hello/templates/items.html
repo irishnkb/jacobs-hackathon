@@ -15,8 +15,8 @@
  <center> 
 <body>
     <h1>Items</h1>
-    {% for p in items %}
-    <h1><a href="/items/get/{{ items.id }}/">{{ p.name }}</a></h1>
+    {% for element in items %}
+    <h1><a href="/items/get/{{ items.id }}/">{{ element.name }}</a></h1>
     {% endfor %}
     </body>
 </center>  
