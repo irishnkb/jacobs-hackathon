@@ -14,10 +14,10 @@ def index(request):
     for t in Timing.objects.all():
         if t.date == date.today():
             timing = t
-    if (str(datetime.now()).split(':')[0][11:13] - t[0].date.opening_time.split(':')[0]) > (str(datetime.now()).split(':')[0][11:13] - t[1].date.opening_time.split(':')[0]):
-        timing = t[1]
-    else:
-        timing = t[0]
+            # if (str(datetime.now()).split(':')[0][11:13] - t[0].date.opening_time.split(':')[0]) > (str(datetime.now()).split(':')[0][11:13] - t[1].date.opening_time.split(':')[0]):
+            #     timing = t[1]
+            # else:
+            #     timing = t[0]
 
     return render(request, "assistant.html",{"timing": timing})
 
