@@ -3,7 +3,7 @@ from django.db import models
 class Item(models.Model):
     name = models.CharField(max_length=1000)
     availability = models.BooleanField()
-    category = models.CharField(max_length=1000, default='')
+    category = models.CharField(max_length=1000, default='SOME STRING')
 
 class Timing(models.Model):
     day = models.CharField(max_length=1000)

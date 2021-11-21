@@ -20,8 +20,9 @@
   <h1>Everyday Items</h1>
   <ul>
     <ul>
-      {% for item in items %}
-      <li>{{ item.name }} ':' {{ item.availability ? "available" : "not available" }}</li>
+      {% for item in items 
+        continue if item.cateogry == 'everyday_items'%}
+      <li>{{ item.name }}  {{item.availability ? "available" : "not available"}} </li>
       {% endfor %}
     </ul>
 </ul>

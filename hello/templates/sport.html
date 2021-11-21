@@ -20,8 +20,9 @@
 
   <h1>Sports Equipment</h1>
   <ul>
-    {% for item in items %}
-    <li>{{ item.name }}  {{{ item.availability}} ? "available" : "not available"} </li>
+    {% for item in items 
+      continue if item.cateogry == 'sports_equipment'%}
+    <li>{{ item.name }}  {{item.availability ? "available" : "not available"}} </li>
     {% endfor %}
   </ul>
 

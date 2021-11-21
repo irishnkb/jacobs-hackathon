@@ -20,12 +20,11 @@
 
   <h1>Board Games</h1>
   <ul>
-   <ul>
-    {% for item in items %}
-    <li>{{ item.name }} ':' {{ item.availability ? "available" : "not available" }}</li>
+    {% for item in items 
+      continue if item.cateogry == 'board_games'%}
+    <li>{{ item.name }}  {{item.availability ? "available" : "not available"}} </li>
     {% endfor %}
   </ul>
-</ul>
   
  
   

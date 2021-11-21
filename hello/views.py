@@ -9,7 +9,7 @@ def index(request):
     return render(request, "assistant.html",{"timings": Timing.objects.all()})
 def items(request):
     # return HttpResponse('Hello from Python!')
-    return render(request, "items.html")
+    return render(request, "items.html",{"items": Item.objects.all()})
     
 def hello_world(request):
     return render(request, "hello_world.html", {"items": Item.objects.all()})
