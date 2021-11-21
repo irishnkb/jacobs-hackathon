@@ -9,7 +9,7 @@ def index(request):
     return render(request, "assistant.html")
 
 def hello_world(request):
-    return render(request, "hello_world.html")
+    return render(request, "hello_world.html", {"items": Item.objects.all()})
 
 
 def db(request):
