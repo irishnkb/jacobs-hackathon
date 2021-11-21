@@ -3,12 +3,18 @@ from django.http import HttpResponse
 
 from hello.models import Item,Timing
 
-import datetime
+from datetime import date
+import calender
 
 # Create your views here.
 def index(request):
     # return HttpResponse('Hello from Python!')
-    return render(request, "assistant.html",{"timings": Timing.objects.all()}, {"current_time": datetime.datetime.today().weekday()})
+    timing = 0
+    for t in Timing.objects.all():
+        timing = t if t.date == date.today()
+
+    return render(request, "assistant.html",{"timing": timing})
+
 def items(request):
     # return HttpResponse('Hello from Python!')
     return render(request, "items.html",{"items": Item.objects.all()})
