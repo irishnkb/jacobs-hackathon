@@ -11,7 +11,8 @@ def index(request):
     # return HttpResponse('Hello from Python!')
     timing = 0
     for t in Timing.objects.all():
-        timing = t if t.date == date.today()
+        if t.date == date.today():
+            timing = t
 
     return render(request, "assistant.html",{"timing": timing})
 
