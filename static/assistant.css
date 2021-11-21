@@ -122,7 +122,11 @@ ul.nav a:hover{
   
   }
   
-
+.info{
+  border: #a8a813;
+  color:#a8a813;
+  border-radius: 50px;
+}
   
 
   

@@ -10,3 +10,7 @@ class Timing(models.Model):
     date = models.DateField()
     opening_time = models.CharField(max_length=1000)
     closing_time = models.CharField(max_length=1000)
+
+class RequestPrinting(models.Model):
+    name = models.CharField(max_length=1000)
+    # file = 
