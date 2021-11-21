@@ -4,7 +4,6 @@ from django.http import HttpResponse
 from hello.models import Item,Timing
 
 from datetime import date
-import calender
 
 # Create your views here.
 def index(request):
