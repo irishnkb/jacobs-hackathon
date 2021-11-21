@@ -2,11 +2,13 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 from .models import Item
+from .models import Timmings
 
 # Create your views here.
 def index(request):
     # return HttpResponse('Hello from Python!')
-    return render(request, "assistant.html")
+    return render(request, "assistant.html",{"timmings": Timmings.objects.all()})
+
 def items(request):
     # return HttpResponse('Hello from Python!')
     return render(request, "items.html")
