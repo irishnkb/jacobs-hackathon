@@ -4,8 +4,9 @@
 <head>
     <meta charset="utf-8">
 	<title>CO Assistant</title>
-	<link rel="stylesheet" href="assistant.css" type="text/css">
-    <script src="myscripts.js"></script>
+  {% load static %}
+
+  <link rel="stylesheet" type="text/css" href="{% static 'assistant.css' %}">
   <!-- Tab links -->
   <ul class="nav">
     <li><a href="assistant.html">Home</a></li>
