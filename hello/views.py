@@ -4,14 +4,20 @@ from django.http import HttpResponse
 from hello.models import Item,Timing
 
 from datetime import date
+from datetime import datetime
 
 # Create your views here.
 def index(request):
     # return HttpResponse('Hello from Python!')
     timing = 0
+
     for t in Timing.objects.all():
         if t.date == date.today():
             timing = t
+    if (str(datetime.now()).split(':')[0][11:13] - t[0].date.opening_time.split(':')[0]) > (str(datetime.now()).split(':')[0][11:13] - t[1].date.opening_time.split(':')[0]):
+        timing = t[1]
+    else:
+        timing = t[0]
 
     return render(request, "assistant.html",{"timing": timing})
 
