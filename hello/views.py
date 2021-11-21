@@ -22,7 +22,7 @@ def db(request):
     return render(request, "db.html", {"items": items})
 
 def update_db(request):
-    id = request.Post['id']
+    id = request.POST['id']
     item = Item.objects.get(pk=id)
     item.availability = not item.availability
     item.save()
