@@ -20,3 +20,11 @@ def db(request):
     items = Item.objects.all()
 
     return render(request, "db.html", {"items": items})
+
+def update_db(request):
+    id = request.Post['id']
+    item = Item.objects.get(pk=id)
+    item.availability = not item.availability
+    item.save()
+    
+
