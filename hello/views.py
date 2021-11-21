@@ -54,7 +54,7 @@ def everyday(request):
     items = []
 
     for item in Item.objects.all():
-        if item.category == "Everyday Items":
+        if item.category == "Everyday Things":
             items.append(item)
     # return HttpResponse('Hello from Python!')
     return render(request, "everyday.html",{"items": items})
