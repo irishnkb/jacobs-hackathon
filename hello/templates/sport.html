@@ -19,11 +19,10 @@
 <body>
 
   <h1>Sports Equipment</h1>
-  <ul>
-    {% for item in items 
-      continue if item.category == 'sports_equipment'%}
-    <li><span>{{ item.name }}</span> <span class="info"> Available?: {{ item.availability }} </span> </li>
-    </ul>
+ 
+    {% for item in items %}
+      {%continue if item.category == 'Sports Equipment'%}
+      <li><span>{{ item.name }}</span> <span class="info"> Available?: {{ item.availability }} </span> </li>
     {% endfor %}
   
 

@@ -35,6 +35,14 @@ def search(request):
     # return HttpResponse('Hello from Python!')
     return render(request, "search.html")
 
+def board(request):
+    # return HttpResponse('Hello from Python!')
+    return render(request, "board.html")
+    
+def everyday(request):
+    # return HttpResponse('Hello from Python!')
+    return render(request, "everyday.html")
+
 def db(request):
     item = Item()
     item.save()

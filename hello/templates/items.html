@@ -16,7 +16,8 @@
 <body>
     <h1>Please Mark Lent out/Returned Items</h1>
     {% for p in items %}
-    <h1><a class="item" href="/items/get/{{ items.id }}/">{{ p.name }}</a></h1>
+    <input type="checkbox">
+    <label ><a class="item" href="/items/get/{{ items.id }}/">{{ p.name }}</a></label>
     {% endfor %}
     </body>
 </html>
