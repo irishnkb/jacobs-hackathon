@@ -18,14 +18,6 @@ def sport(request):
     # return HttpResponse('Hello from Python!')
     return render(request, "sport.html",{"items": Item.objects.all()})
 
-def db(request):
-    item = Item()
-    item.save()
-
-    items = Item.objects.all()
-
-    return render(request, "db.html", {"items": items})
-
 def update_db(request):
     id = request.GET['id']
     item = Item.objects.get(pk=id)
