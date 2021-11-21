@@ -23,8 +23,9 @@
     {% for item in items 
       continue if item.category == 'board_games'%}
       <li><span>{{ item.name }}</span> <span class="info"> Available?: {{ item.availability }} </span> </li>
+    </ul>
     {% endfor %}
-  </ul>
+  
   
  
   

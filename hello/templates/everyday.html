@@ -19,14 +19,14 @@
 <body>
 
   <h1>Everyday Items</h1>
-  <ul>
+
     <ul>
       {% for item in items 
         continue if item.category == 'everyday_items'%}
         <li><span>{{ item.name }}</span> <span class="info"> Available?: {{ item.availability }} </span> </li>
-      {% endfor %}
-    </ul>
-</ul>
+     </ul> {% endfor %}
+    
+
   
  
   
