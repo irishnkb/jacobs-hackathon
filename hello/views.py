@@ -3,10 +3,12 @@ from django.http import HttpResponse
 
 from hello.models import Item,Timing
 
+import datetime
+
 # Create your views here.
 def index(request):
     # return HttpResponse('Hello from Python!')
-    return render(request, "assistant.html",{"timings": Timing.objects.all()})
+    return render(request, "assistant.html",{"timings": Timing.objects.all()}, {"current_time": datetime.datetime.today().weekday()})
 def items(request):
     # return HttpResponse('Hello from Python!')
     return render(request, "items.html",{"items": Item.objects.all()})
@@ -32,5 +34,3 @@ def update_db(request):
     item.availability = not item.availability
     item.save()
     return render(request, "assistant.html")
-    
-
