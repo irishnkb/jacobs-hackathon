@@ -7,7 +7,10 @@ from .models import Item
 def index(request):
     # return HttpResponse('Hello from Python!')
     return render(request, "assistant.html")
-
+def items(request):
+    # return HttpResponse('Hello from Python!')
+    return render(request, "items.html")
+    
 def hello_world(request):
     return render(request, "hello_world.html", {"items": Item.objects.all()})
 
