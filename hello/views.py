@@ -24,13 +24,9 @@ def db(request):
     return render(request, "db.html", {"items": items})
 
 def update_db(request):
-    print(request.GET)
     id = request.GET['id']
-    print(id)
     item = Item.objects.get(pk=id)
-    print("availablity = ", item.availability)
     item.availability = not item.availability
-    print("availablity = ", item.availability)
     item.save()
     return render(request, "assistant.html")
     
