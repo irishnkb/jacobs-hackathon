@@ -21,11 +21,10 @@
   <h1>Sports Equipment</h1>
   <ul>
     {% for item in items %}
-    <li>{{ item.name }}  <% if item.availability == True:
-      print("Available")
-    else:
-      print("Unavailable")%> </li>
-    {% endfor %}
+    {% if item.availability == True &}
+    <li>{{ item.name }} ':' {{ Available }}</li>
+    {% else %}
+    <li>{{ item.name }} ':' {{ Unavailable}}</li>
   </ul>
 
 </body>
