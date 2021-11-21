@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+	<title>CO Assistant</title>
+	<link rel="stylesheet" href="assistant.css" type="text/css">
+    <script src="myscripts.js"></script>
+  <!-- Tab links -->
+  <ul class="nav">
+    <li><a href="assistant.html">Home</a></li>
+    <li><a href="search.html">Items Availability</a></li>
+    <li><a href="">Request Printing</a></li>
+  </ul>
+</head>
+
+<center>
+<body>
+
+  <h1>Everyday Items</h1>
+  <ul>
+    <ul>
+      {% for item in items %}
+      <li>{{ item.name }} ':' {{ item.availability ? "available" : "not available" }}</li>
+      {% endfor %}
+    </ul>
+</ul>
+  
+ 
+  
+</body>
+</center>
+</html>

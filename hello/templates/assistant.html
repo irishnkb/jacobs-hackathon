@@ -1,0 +1,35 @@
+  <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+	<title>CO Assistant</title>
+  {% load static %}
+
+  <link rel="stylesheet" type="text/css" href="{% static 'assistant.css' %}">
+  <!-- Tab links -->
+  <ul class="nav">
+    <li><a href="/">Home</a></li>
+    <li><a href="/sports">Items Availability</a></li>
+    <li><a href="">Request Printing</a></li>
+  </ul>
+</head>
+
+<center>
+<body>
+<br>
+<br>
+  <h1>Welcome to College Office!</h1>
+  <br>
+  <div class="hours">
+    <h2 class="inbox">Opening Hours Today</h2>
+    <br>
+    <p class="inbox">Afternoon:</p>
+    <h2 class="time">{timmings.time_start}</h2>
+    <p class="inbox">Evening:</p>
+    <h2 class="time">{timmings.time_end}</h2>
+  </div>
+  
+</body>
+</center>
+</html>
