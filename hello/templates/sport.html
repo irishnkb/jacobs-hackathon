@@ -23,8 +23,9 @@
     {% for item in items 
       continue if item.category == 'sports_equipment'%}
     <li><span>{{ item.name }}</span> <span class="info"> Available?: {{ item.availability }} </span> </li>
+    </ul>
     {% endfor %}
-  </ul>
+  
 
 </body>
 </center>
