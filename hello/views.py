@@ -24,18 +24,34 @@ def hello_world(request):
 
 def sport(request):
     # return HttpResponse('Hello from Python!')
-    return render(request, "sport.html",{"items": Item.objects.all()})
+    items = []
+    for item in Item.objects.all():
+        if item.category == "Sports Equipment":
+            items.push(item)
+
+
+    return render(request, "sport.html",{"items": items})
 def search(request):
     # return HttpResponse('Hello from Python!')
     return render(request, "search.html")
 
 def board(request):
+    items = []
+    for item in Item.objects.all():
+        if item.category == "Board Games":
+            items.push(item)
     # return HttpResponse('Hello from Python!')
-    return render(request, "board.html")
+    return render(request, "board.html",{"items": items})
+
     
-def everyday(request):
+def everyday(request): 
+    items = []
+
+    for item in Item.objects.all():
+        if item.category == "Everyday Items":
+            items.push(item)
     # return HttpResponse('Hello from Python!')
-    return render(request, "everyday.html")
+    return render(request, "everyday.html",{"items": items})
 
 def db(request):
     item = Item()
