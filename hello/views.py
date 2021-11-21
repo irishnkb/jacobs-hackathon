@@ -13,10 +13,9 @@ def hello_world(request):
 
 
 def db(request):
+    item = Item()
+    item.save()
 
-    greeting = Item()
-    greeting.save()
+    items = Item.objects.all()
 
-    greetings = Item.objects.all()
-
-    return render(request, "db.html", {"items": greetings})
+    return render(request, "db.html", {"items": items})

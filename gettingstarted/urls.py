@@ -1,6 +1,8 @@
 from django.urls import path, include
 from django.contrib import admin
 
+admin.autodiscover()
+
 import hello.views
 
 # To add a new path, first import the app:
