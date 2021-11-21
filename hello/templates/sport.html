@@ -21,7 +21,7 @@
   <h1>Sports Equipment</h1>
   <ul>
     {% for item in items %}
-    <li>{{ item.name }}  {{{{ item.availability}} ? "available" : "not available" }}</li>
+    <li>{{ item.name }}  {{ item.availability}} {{ ? "available" : "not available" }}</li>
     {% endfor %}
   </ul>
 
