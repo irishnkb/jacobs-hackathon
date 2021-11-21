@@ -20,8 +20,8 @@
 
   <h1>Board Games</h1>
 
-    {% for item in items 
-      continue if item.category == 'board_games'%}
+    {% for item in items%}
+      {%continue if item.category == 'Board Games'%}
       <li><span>{{ item.name }}</span> <span class="info"> Available?: {{ item.availability }} </span> </li>
    
     {% endfor %}
