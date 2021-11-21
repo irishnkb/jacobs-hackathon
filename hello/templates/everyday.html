@@ -19,9 +19,12 @@
 
   <h1>Everyday Items</h1>
   <ul>
-    <li>obj 1 </li>
-    <li>obj 2 </li>
-    <li>obj 2 </li>
+    <ul>
+      {% for item in items 
+        continue if item.category == 'everyday_items'%}
+      <li>{{ item.name }}  {{item.availability ? "available" : "not available"}} </li>
+      {% endfor %}
+    </ul>
 </ul>
   
  

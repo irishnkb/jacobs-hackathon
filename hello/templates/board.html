@@ -4,8 +4,10 @@
 <head>
     <meta charset="utf-8">
 	<title>CO Assistant</title>
-	<link rel="stylesheet" href="assistant.css" type="text/css">
-    <script src="myscripts.js"></script>
+  {% load static %}
+
+  <link rel="stylesheet" type="text/css" href="{% static 'assistant.css' %}">
+
   <ul class="nav">
     <li><a href="assistant.html">Home</a></li>
     <li><a href="search.html">Items Availability</a></li>
@@ -18,10 +20,11 @@
 
   <h1>Board Games</h1>
   <ul>
-    <li>obj 1 </li>
-    <li>obj 2 </li>
-    <li>obj 2 </li>
-</ul>
+    {% for item in items 
+      continue if item.category == 'board_games'%}
+    <li>{{ item.name }}  {{item.availability ? "available" : "not available"}} </li>
+    {% endfor %}
+  </ul>
   
  
   
